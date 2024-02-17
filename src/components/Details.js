@@ -142,6 +142,7 @@ flex-direction: column;
 & .borderCountries{
     // border: 1px solid red;
     display: flex;
+    
     align-items: center;
     justify-content: left;
     margin-top: 60px;
@@ -150,12 +151,13 @@ flex-direction: column;
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-        // flex-wrap: wrap;
+        
     }
     
 
     .borderCountriesSubcontainer{
         display: flex;
+        flex-wrap: wrap;
         gap: 10px;
         margin-left: 10px;
         // border: 1px solid blue;
