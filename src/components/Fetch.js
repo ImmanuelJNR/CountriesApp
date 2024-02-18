@@ -28,7 +28,7 @@ const Fetch = ({category, searchTerm }) => {
     fetch(apiUrl)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(countriesDatadata);
         setCountries(data);
       });
   }, []);
