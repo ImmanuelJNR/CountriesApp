@@ -73,6 +73,13 @@ function App() {
 
             <AppContainer className="app" id={theme}>
               <Header toggleTheme={toggleTheme}/>
+              <Div className="div">
+                      <Group1>
+                        <SearchInput onSearch={handleSearch} />
+                        <DropdownMenu setSelectedCategory={setSelectedCategory} />
+                      </Group1>
+                      <Fetch category={selectedCategory} searchTerm={searchTerm}/>
+              </Div>
               <Routes>
                   <Route
                     path="/country/:id"
