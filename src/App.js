@@ -110,20 +110,7 @@ function App() {
                     }
                   />
 
-                {/* <Route    path="/"
-          
-                  element={
-                    
-                    <Div className="div">
-                      <Group1>
-                        <SearchInput onSearch={handleSearch} />
-                        <DropdownMenu setSelectedCategory={setSelectedCategory} />
-                      </Group1>
-                      <Fetch category={selectedCategory} searchTerm={searchTerm}/>
-                    </Div>
-                    
-                  }
-                /> */}
+
 
               </Routes>
             </AppContainer>
