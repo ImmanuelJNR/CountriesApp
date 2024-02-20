@@ -79,11 +79,12 @@ function App() {
 
             <AppContainer className="app" id={theme}>
           
-          <Header toggleTheme={toggleTheme} />
           <Routes>
               <Route    path="/"
               
               element={
+                <>
+                <Header toggleTheme={toggleTheme} />
                 
                 <Div className="div">
                   <Group1>
@@ -92,6 +93,7 @@ function App() {
                   </Group1>
                   <Fetch category={selectedCategory} searchTerm={searchTerm}/>
                 </Div>
+                </>
                 
               }
             />
@@ -102,12 +104,13 @@ function App() {
                     path="/country/:id"
                     element={
                       <>
+                          <Header toggleTheme={toggleTheme} />
                           <CountriesFullDetail/>
                       </>
                     }
                   />
 
-                <Route    path="/"
+                {/* <Route    path="/"
           
                   element={
                     
@@ -120,7 +123,7 @@ function App() {
                     </Div>
                     
                   }
-                />
+                /> */}
 
               </Routes>
             </AppContainer>
