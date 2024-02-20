@@ -74,17 +74,17 @@ function App() {
   
 
   return (
-    <Router>
+    <Router basename="CountriesApp">
       <ThemeContext.Provider value={{theme, toggleTheme}}>
 
             <AppContainer className="app" id={theme}>
           
+            <Header toggleTheme={toggleTheme} />
           <Routes>
               <Route    path="/"
               
               element={
                 <>
-                <Header toggleTheme={toggleTheme} />
                 
                 <Div className="div">
                   <Group1>
@@ -104,7 +104,7 @@ function App() {
                     path="/country/:id"
                     element={
                       <>
-                          <Header toggleTheme={toggleTheme} />
+                          {/* <Header toggleTheme={toggleTheme} /> */}
                           <CountriesFullDetail/>
                       </>
                     }
