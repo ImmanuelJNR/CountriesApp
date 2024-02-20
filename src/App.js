@@ -74,7 +74,7 @@ function App() {
   
 
   return (
-    <Router basename="/CountriesApp">
+    <Router>
       <ThemeContext.Provider value={{theme, toggleTheme}}>
 
             <AppContainer className="app" id={theme}>
