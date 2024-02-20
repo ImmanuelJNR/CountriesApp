@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, useNavigate, useLocation} from "react-router-dom";
 import DropdownMenu from "./components/Dropdown.js";
 import SearchInput from "./components/SearchInput.js";
 import Header from "./components/Header.js";
@@ -55,6 +55,9 @@ scrollbar-width: none;
 function App() {
   const [selectedCategory, setSelectedCategory] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
+  // const navigate = useNavigate();
+  // const location = useLocation(); // Get current location using useLocation hook
+  // const isCountryDetailRoute = location.pathname.startsWith('/country');
 
   const handleSearch = (term) => {
     setSearchTerm(term);
@@ -66,28 +69,40 @@ function App() {
   const toggleTheme = () => {
     setTheme((curr) => (curr === 'light' ? 'dark' : 'light'))
   }
+
+
   
+
   return (
-    <Router>
+    <Router basename="/CountriesApp">
       <ThemeContext.Provider value={{theme, toggleTheme}}>
 
             <AppContainer className="app" id={theme}>
-              <Header toggleTheme={toggleTheme}/>
-              <Div className="div">
-                      <Group1>
-                        <SearchInput onSearch={handleSearch} />
-                        <DropdownMenu setSelectedCategory={setSelectedCategory} />
-                      </Group1>
-                      <Fetch category={selectedCategory} searchTerm={searchTerm}/>
-              </Div>
-              <Routes>
+          
+          <Header toggleTheme={toggleTheme} />
+          <Routes>
+              <Route    path="/"
+              
+              element={
+                
+                <Div className="div">
+                  <Group1>
+                    <SearchInput onSearch={handleSearch} />
+                    <DropdownMenu setSelectedCategory={setSelectedCategory} />
+                  </Group1>
+                  <Fetch category={selectedCategory} searchTerm={searchTerm}/>
+                </Div>
+                
+              }
+            />
+        
+              
+      
                   <Route
                     path="/country/:id"
                     element={
                       <>
-                        {/* <body className="white-background"> */}
-                          <CountriesFullDetail />
-                        {/* </body> */}
+                          <CountriesFullDetail/>
                       </>
                     }
                   />

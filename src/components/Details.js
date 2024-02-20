@@ -190,6 +190,7 @@ function CountriesFullDetail() {
     const { state } = useLocation();
     const country = state?.country;
     const navigate = useNavigate();
+    console.log('State received in CountriesFullDetail:', state);
 
 
     const handleGoBack = () => {

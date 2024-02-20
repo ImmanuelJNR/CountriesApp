@@ -57,9 +57,12 @@ function CountriesDetail({country, index}) {
 
         <ApiDataContainer className='countriesCard'>
             {/* <div></div> */}
-            <Link key={index} to={`/country/${index}`} state={{ country }}>
+            {/* <Link key={index} to={`/country/${index}`} state={{ country }}>
             <img src={country.flags.svg} alt='flag'/>  
-            </Link>  
+            </Link>   */}
+            <Link to={`/country/${index}`} state={{ country }}>
+            <img src={country.flags.svg} alt='flag' />  
+            </Link>
             <h4>{country.name.common}</h4>
             <p><span>population:</span> {country.population.toLocaleString()}</p>
             <p><span>Region:</span> {country.region}</p>
