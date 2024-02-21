@@ -55,13 +55,10 @@ scrollbar-width: none;
 function App() {
   const [selectedCategory, setSelectedCategory] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
-  // const navigate = useNavigate();
-  // const location = useLocation(); // Get current location using useLocation hook
-  // const isCountryDetailRoute = location.pathname.startsWith('/country');
+
 
   const handleSearch = (term) => {
     setSearchTerm(term);
-    // You can perform your search action here, like fetching data based on the search term
     console.log('Searching for:', term);
   };
 
@@ -104,7 +101,6 @@ function App() {
                     path="/country/:id"
                     element={
                       <>
-                          {/* <Header toggleTheme={toggleTheme} /> */}
                           <CountriesFullDetail/>
                       </>
                     }
