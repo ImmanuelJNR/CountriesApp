@@ -13,7 +13,7 @@ The Countries Info Web App is a simple web application that utilizes a countries
 * Toggle the color scheme between light and dark mode
 
 
-### Screenshots
+### Screenshot
 ![desktop-design-home-light](https://github.com/ImmanuelJNR/CountriesApp/assets/99079775/c5f3a82c-810d-4e2b-b300-5051a7e5d364)
 
 
@@ -27,7 +27,7 @@ The Countries Info Web App is a simple web application that utilizes a countries
 * Live Site URL:(https://immanueljnr.github.io/CountriesApp/)
 
 ### Developer's Contact
-- Email - (elijaheffiong088@gmail.com )
+- Email - elijaheffiong088@gmail.com 
 - linkedIn - [@Elijah Emmanuel](https://www.linkedin.com/in/elijah-emmanuel-256bb1239?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bo7rPTYQhRUq3HHfEvnZWFQ%3D%3D)
 - Instagram - [@elijahemmanuelz](https://www.instagram.com/elijahemmanuelz/)
   
